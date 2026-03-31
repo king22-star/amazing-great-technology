@@ -1,0 +1,15 @@
+.gitignore# System files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+
+# Node modules (niba uzakoresha JS ejo)
+node_modules/
+
+# Editor files
+.vscode/
