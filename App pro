@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MR G5 PRO+</title>
+
+<style>
+body{
+    margin:0;
+    background:black;
+    color:white;
+    font-family:Arial;
+}
+
+/* scroll */
+.container{
+    height:100vh;
+    overflow-y:scroll;
+    scroll-snap-type:y mandatory;
+}
+
+/* video section */
+.video{
+    height:100vh;
+    position:relative;
+    scroll-snap-align:start;
+}
+
+iframe{
+    width:100%;
+    height:100%;
+}
+
+/* actions */
+.actions{
+    position:absolute;
+    right:10px;
+    bottom:80px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+button{
+    padding:10px;
+    border:none;
+    border-radius:50%;
+    background:red;
+    color:white;
+}
+
+/* comments */
+.comments{
+    position:absolute;
+    bottom:0;
+    background:rgba(0,0,0,0.8);
+    width:100%;
+    max-height:40%;
+    overflow:auto;
+    display:none;
+}
+
+.comments input{
+    width:70%;
+    padding:8px;
+}
+
+.comments button{
+    border-radius:5px;
+}
+
+/* top bar */
+.top{
+    position:fixed;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    padding:10px;
+    background:rgba(0,0,0,0.5);
+}
+
+input.search{
+    width:70%;
+    padding:5px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="top">
+<input class="search" placeholder="Search video..." onkeyup="search(this)">
+<div onclick="alert('Profile page 🔥')">👤</div>
+</div>
+
+<div class="container" id="videos">
+
+<!-- VIDEO -->
+<div class="video" data-title="tech tutorial">
+<iframe src="https://www.youtube.com/embed/L4Lkt2r8GSw"></iframe>
+
+<div class="actions">
+<button onclick="like(this)">❤️ <span>0</span></button>
+<button onclick="toggleComments(this)">💬</button>
+</div>
+
+<div class="comments">
+<div class="list"></div>
+<input placeholder="comment...">
+<button onclick="addComment(this)">Send</button>
+</div>
+
+</div>
+
+<div class="video" data-title="android tricks">
+<iframe src="https://www.youtube.com/embed/wtV7uEJUpHY"></iframe>
+
+<div class="actions">
+<button onclick="like(this)">❤️ <span>0</span></button>
+<button onclick="toggleComments(this)">💬</button>
+</div>
+
+<div class="comments">
+<div class="list"></div>
+<input placeholder="comment...">
+<button onclick="addComment(this)">Send</button>
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+// LIKE + COUNT
+function like(btn){
+    let span = btn.querySelector("span");
+    let count = parseInt(span.innerText);
+    count++;
+    span.innerText = count;
+}
+
+// TOGGLE COMMENTS
+function toggleComments(btn){
+    let comments = btn.parentElement.parentElement.querySelector(".comments");
+    comments.style.display = comments.style.display=="block"?"none":"block";
+}
+
+// ADD COMMENT
+function addComment(btn){
+    let box = btn.parentElement;
+    let input = box.querySelector("input");
+    let list = box.querySelector(".list");
+
+    if(input.value.trim()=="") return;
+
+    let p = document.createElement("p");
+    p.innerText = input.value;
+
+    list.appendChild(p);
+    input.value="";
+}
+
+// SEARCH
+function search(input){
+    let value = input.value.toLowerCase();
+    let videos = document.querySelectorAll(".video");
+
+    videos.forEach(v=>{
+        let title = v.dataset.title;
+        v.style.display = title.includes(value) ? "block" : "none";
+    });
+}
+
+</script>
+
+</body>
+</html>
