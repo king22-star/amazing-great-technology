@@ -1,0 +1,47 @@
+Title: Amayeri yo Gukora Format kuri Telefone Zitandukanye
+Author: Niyonkuru Joel
+Email: niyonkurujoel22@gmail.com
+Content:
+1. Ingingo Rusange ku Factory Reset
+Factory reset ni ugusubiza telefone ku buryo bwabanje kugurishwa (default settings).
+Ibi bisiba apps, data, settings, ariko SIM card na SD card birasigara niba utabyohereje.
+Buri gihe backup mbere yo gukora reset.
+2. Uko wakora Format kuri Infinix
+Method 1: Settings Menu
+Jya muri Settings → System → Reset → Factory Data Reset
+Kanda Erase all data / Reset phone
+Telefone izasubira ku settings za factory
+Method 2: Hardware Buttons (Recovery Mode)
+Funga telefone
+Kanda Volume Up + Power icyarimwe kugeza logo ya Infinix igaragara
+Hitamo Wipe data / Factory reset ukoresheje Volume buttons
+Kanda Power button kugirango uhitamo
+3. Uko wakora Format kuri Itel
+Settings Menu:
+Settings → Backup & Reset → Factory Data Reset → Reset phone → Erase everything
+Recovery Mode:
+Funga telefone
+Kanda Volume Up + Power
+Hitamo Wipe data / Factory reset
+Hitamo Reboot system now
+4. Uko wakora Format kuri Samsung
+Settings Menu:
+Settings → General Management → Reset → Factory Data Reset → Reset → Delete all
+Hardware Buttons:
+Funga telefone
+Kanda Volume Up + Bixby + Power (Samsung zigezweho)
+Hitamo Wipe data / Factory reset
+Reboot system now
+5. Uko wakora Format kuri Nokia
+Settings Menu:
+Settings → System → Reset → Factory Data Reset → Yes → Reset phone
+Recovery Mode:
+Funga telefone
+Kanda Volume Up + Power kugeza Nokia logo igaragara
+Hitamo Wipe data / Factory reset
+Reboot system now
+6. Inama Z’ingenzi
+Always backup data mbere yo gukora reset
+Koresha charger cyangwa full battery kugirango reset idahagarara hagati
+Ntukibagirwe ko SIM na SD card bitasibwe
+Format ntibikiza hardware problem, ni software gusa
